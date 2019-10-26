@@ -325,7 +325,7 @@ Module.register("MMM-PrayerTime",{
       }
       else { // horizontal view
         var table = document.createElement("table");
-        table.className = "small";
+        table.className = "medium";
 
         var row = document.createElement("tr");
         if (this.config.colored) {
@@ -335,7 +335,7 @@ Module.register("MMM-PrayerTime",{
 
         var occasionName = document.createElement("td");
         occasionName.className = "occasion-name bright light";
-        occasionName.innerHTML = '&nbsp;';
+        occasionName.innerHTML = 'TIME';
         row.appendChild(occasionName);
 
         // column label
@@ -354,7 +354,7 @@ Module.register("MMM-PrayerTime",{
         table.appendChild(rowToday);
 
         var occasionNameToday = document.createElement("td");
-        occasionNameToday.className = "occasion-time bright light";
+        occasionNameToday.className = "occasion-name bright light";
         occasionNameToday.innerHTML = this.translate('TODAY');
         rowToday.appendChild(occasionNameToday);
         for (t in this.arrTodaySchedule) {
@@ -373,7 +373,7 @@ Module.register("MMM-PrayerTime",{
           table.appendChild(rowNext);
 
           var occasionNameNext = document.createElement("td");
-          occasionNameNext.className = "occasion-time bright light";
+          occasionNameNext.className = "occasion-name bright light";
           occasionNameNext.innerHTML = this.translate('TOMORROW');
           rowNext.appendChild(occasionNameNext);
           for (t in this.arrTodaySchedule) {
